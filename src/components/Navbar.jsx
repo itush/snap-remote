@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import snapLogo from '../assets/images/logo.svg';
 import dArrow from '../assets/images/icon-arrow-down.svg';
 import uArrow from '../assets/images/icon-arrow-up.svg';
@@ -30,7 +31,9 @@ const Navbar = () => {
       <div id="big-nav-bar" className='flex items-center lg:space-x-44 lg:font-bold '>
 
         <div id='logo-container' className='lg:w-full' >
+          <Link to="/">
           <img src={snapLogo} alt="snap-logo" />
+          </Link>
         </div>
 
         <div id="big-nav-links1" className='hidden w-[60%] lg:block '>
@@ -79,8 +82,13 @@ const Navbar = () => {
                 }
               </button>
             </li>
-            <li className='text-MediumGray hover:text-black cursor-pointer'>Careers</li>
-            <li className='text-MediumGray hover:text-black cursor-pointer'>About</li>
+            <li className='text-MediumGray hover:text-black cursor-pointer'>
+            <Link to="/careers">Careers</Link>              
+              </li>
+
+            <li className='text-MediumGray hover:text-black cursor-pointer'>
+              <Link to="/about">About</Link>
+              </li>
           </ul>
         </div>
 
@@ -152,8 +160,12 @@ const Navbar = () => {
 
             }
           </li>
-          <li>Careers</li>
-          <li>About</li>
+          <li>
+            <Link to="/careers">Careers</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
         </ul>
 
         <div id="small-nav-links2" className='flex flex-col text-MediumGray'>
