@@ -19,7 +19,7 @@ const MainContent = () => {
 
         <p className='text-center px-3 md:text-xl sm:px-16 md:px-32 lg:text-left lg:px-0 lg:my-8 xl:text-2xl xl2:text-3xl xl2:mt-16'>Get your team in sync, no matter your location. Streamline processes,create team rituals, and watch productivity soar.</p>
 
-        <button className='block bg-AlmostBlack text-AlmostWhite w-1/3 mx-auto p-2 my-4 rounded-lg font-bold lg:inline xl:text-2xl xl2:text-3xl xl2:w-1/2 xl2:mt-16'>
+        <button className='block bg-AlmostBlack text-AlmostWhite w-1/3 mx-auto p-2 my-4 rounded-lg font-bold hover:bg-AlmostWhite hover:text-AlmostBlack hover:border-2 hover:border-AlmostBlack lg:inline xl:text-2xl xl2:text-3xl xl2:w-1/2 xl2:mt-16'>
           Learn more
         </button>
 

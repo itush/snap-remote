@@ -36,7 +36,7 @@ const Navbar = () => {
         <div id="big-nav-links1" className='hidden w-[60%] lg:block '>
           <ul className='flex justify-between lg:space-x-8 xl:-ml-40'>
             <li className='relative '>
-              <button onClick={handleFeatBtn} className="flex items-baseline" >Features
+              <button onClick={handleFeatBtn} className="flex items-baseline text-MediumGray hover:text-black" >Features
                 <img src={featBtn ? uArrow : dArrow} alt="u-d-arrow" />
               </button>
               {featBtn ? <ul className='my-2 absolute w-[200%] p-4 ml-[-100%] bg-white rounded-lg drop-shadow-2xl space-y-2'>
@@ -61,7 +61,7 @@ const Navbar = () => {
               }
             </li>
             <li className='relative'>
-              <button onClick={handleCompBtn} className="flex items-baseline">Company
+              <button onClick={handleCompBtn} className="flex items-baseline text-MediumGray hover:text-black">Company
                 <img src={compBtn ? uArrow : dArrow} alt="u-d-arrow" />
                 {compBtn ?
                   <ul className='absolute my-2 w-[160%] p-4 ml-[-20%] mt-[40%] bg-white rounded-lg drop-shadow-2xl space-y-2'>
@@ -79,15 +79,15 @@ const Navbar = () => {
                 }
               </button>
             </li>
-            <li>Careers</li>
-            <li>About</li>
+            <li className='text-MediumGray hover:text-black cursor-pointer'>Careers</li>
+            <li className='text-MediumGray hover:text-black cursor-pointer'>About</li>
           </ul>
         </div>
 
         <div id="big-nav-links2" className='hidden w-[20%] mb-4 text-MedimGray lg:block '>
           <div className="flex items-center space-x-4 mt-4">
-            <button className='xl:ml-[200%] xl2:ml-[350%]'>Login</button>
-            <button className='border-2 rounded-lg px-4 py-1 border-MediumGray '>Register</button>
+            <button className='text-MediumGray hover:text-black xl:ml-[200%] xl2:ml-[350%]'>Login</button>
+            <button className='text-MediumGray hover:text-black border-2 rounded-lg px-4 py-1 border-MediumGray hover:border-black '>Register</button>
           </div>
         </div>
 
