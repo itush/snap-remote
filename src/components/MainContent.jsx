@@ -9,17 +9,17 @@ import cMkr from '../assets/images/client-maker.svg';
 const MainContent = () => {
   return (
     <div className='lg:flex lg:flex-row-reverse lg:px-[12.5%]'>
-      <section>
-        <img src={heroM} alt="heroM" className='lg:hidden'/>
+      <section className='w-full'>
+        <img src={heroM} alt="heroM" className='lg:hidden' />
         <img src={heroD} alt="heroD" className='hidden lg:block' />
       </section>
-      <section className='my-4'>
+      <section className='my-4 w-full'>
 
-        <h1 className='text-2xl text-center font-bold my-4 vvsm:text-3xl sm:text-4xl lg:text-left lg:text-6xl '>Make remote work</h1>
+        <h1 className='text-2xl text-center font-bold my-4 vvsm:text-3xl sm:text-4xl lg:text-left lg:text-6xl xl:mt-28 xl:text-7xl '>Make remote work</h1>
 
-        <p className='text-center px-3 md:text-1xl sm:px-16 md:px-32 lg:text-left lg:px-0 lg:my-8'>Get your team in sync, no matter your location. Streamline processes,create team rituals, and watch productivity soar.</p>
+        <p className='text-center px-3 md:text-xl sm:px-16 md:px-32 lg:text-left lg:px-0 lg:my-8 xl:text-2xl xl2:text-3xl xl2:mt-16'>Get your team in sync, no matter your location. Streamline processes,create team rituals, and watch productivity soar.</p>
 
-        <button className='block bg-AlmostBlack text-AlmostWhite w-1/3 mx-auto p-2 my-4 rounded-lg font-bold lg:inline'>
+        <button className='block bg-AlmostBlack text-AlmostWhite w-1/3 mx-auto p-2 my-4 rounded-lg font-bold lg:inline xl:text-2xl xl2:text-3xl xl2:w-1/2 xl2:mt-16'>
           Learn more
         </button>
 

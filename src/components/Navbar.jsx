@@ -27,43 +27,87 @@ const Navbar = () => {
 
   return (
     <nav className='flex justify-between items-center space my-4 w-[90%] mx-auto font-semibold'>
-      <div id="big-nav-bar" className='flex md:space-x-24 '>
+      <div id="big-nav-bar" className='flex items-center lg:space-x-44 lg:font-bold '>
 
-        <div id='logo-container' >
+        <div id='logo-container' className='lg:w-full' >
           <img src={snapLogo} alt="snap-logo" />
         </div>
 
-        <div id="big-nav-links1" className='hidden md:block '>
-          <ul className='flex justify-between md:space-x-4'>
-            <li>Features <button><img src={dArrow} alt="d-arrow" /></button></li>
-            <li>Company <button><img src={dArrow} alt="d-arrow" /></button></li>
+        <div id="big-nav-links1" className='hidden w-[60%] lg:block '>
+          <ul className='flex justify-between lg:space-x-8 xl:-ml-40'>
+            <li className='relative '>
+              <button onClick={handleFeatBtn} className="flex items-baseline" >Features
+                <img src={featBtn ? uArrow : dArrow} alt="u-d-arrow" />
+              </button>
+              {featBtn ? <ul className='my-2 absolute w-[200%] p-4 ml-[-100%] bg-white rounded-lg drop-shadow-2xl space-y-2'>
+                <li className='flex space-x-2'>
+                  <img src={todoIcon} alt="todo-ico" />
+                  <h6>Todo List</h6>
+                </li>
+                <li className='flex space-x-2'>
+                  <img src={calIcon} alt="cal-ico" />
+                  <h6>Calender</h6>
+                </li>
+                <li className='flex space-x-2'>
+                  <img src={remIcon} alt="rem-ico" />
+                  <h6>Reminders</h6>
+                </li>
+                <li className='flex  space-x-2'>
+                  <img src={planIcon} alt="plan-ico" />
+                  <h6>Planning</h6>
+                </li>
+              </ul> : <></>
+
+              }
+            </li>
+            <li className='relative'>
+              <button onClick={handleCompBtn} className="flex items-baseline">Company
+                <img src={compBtn ? uArrow : dArrow} alt="u-d-arrow" />
+                {compBtn ?
+                  <ul className='absolute my-2 w-[160%] p-4 ml-[-20%] mt-[40%] bg-white rounded-lg drop-shadow-2xl space-y-2'>
+                    <li className='flex  space-x-2'>
+                      <h6>History</h6>
+                    </li>
+                    <li className='flex  space-x-2'>
+                      <h6>Our Team</h6>
+                    </li>
+                    <li className='flex  space-x-2'>
+                      <h6>Blog</h6>
+                    </li>
+                  </ul> : <></>
+
+                }
+              </button>
+            </li>
             <li>Careers</li>
             <li>About</li>
           </ul>
         </div>
 
-        <div id="big-nav-links2" className='hidden md:block md:space-x-4'>
-          <button>Login</button>
-          <button>Register</button>
+        <div id="big-nav-links2" className='hidden w-[20%] mb-4 text-MedimGray lg:block '>
+          <div className="flex items-center space-x-4 mt-4">
+            <button className='xl:ml-[200%] xl2:ml-[350%]'>Login</button>
+            <button className='border-2 rounded-lg px-4 py-1 border-MediumGray '>Register</button>
+          </div>
         </div>
 
       </div>
-      <div onClick={handleMenuBtn} className='block md:hidden '>
+      <div onClick={handleMenuBtn} className='block lg:hidden '>
         {menuBtn ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}
       </div>
 
 
       <div id='small-nav-bar' className={menuBtn ? 'fixed ml-[35%] top-0 w-[60%] h-full p-4 bg-white' : 'fixed left-[-100%]'}>
 
-        <div onClick={handleMenuBtn} className='block w-[10%] ml-[85%] md:hidden '>
+        <div onClick={handleMenuBtn} className='block w-[10%] ml-[85%] md:ml-[90%] lg:hidden '>
           {menuBtn ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}
         </div>
 
         <ul id="small-nav-links1" className='my-8 text-MediumGray'>
 
           <li>
-            Features
-            <button onClick={handleFeatBtn} className='mx-4'>
+
+            <button onClick={handleFeatBtn} className='flex items-baseline'>Features
               <img src={featBtn ? uArrow : dArrow} alt="u-d-arrow" />
 
             </button>
@@ -73,15 +117,15 @@ const Navbar = () => {
                 <h6>Todo List</h6>
               </li>
               <li className='flex ml-2 space-x-2'>
-              <img src={calIcon} alt="cal-ico"/> 
+                <img src={calIcon} alt="cal-ico" />
                 <h6>Calender</h6>
               </li>
               <li className='flex ml-2 space-x-2'>
-              <img src={remIcon} alt="rem-ico"/> 
+                <img src={remIcon} alt="rem-ico" />
                 <h6>Reminders</h6>
               </li>
               <li className='flex ml-2 space-x-2'>
-              <img src={planIcon} alt="plan-ico"/> 
+                <img src={planIcon} alt="plan-ico" />
                 <h6>Planning</h6>
               </li>
             </ul> : <></>
@@ -89,21 +133,21 @@ const Navbar = () => {
             }
           </li>
 
-          <li>Company
-            <button onClick={handleCompBtn} className='mx-4'>
+          <li>
+            <button onClick={handleCompBtn} className='flex items-baseline'>Company
               <img src={compBtn ? uArrow : dArrow} alt="u-d-arrow" />
             </button>
             {compBtn ?
               <ul className='my-2 space-y-2'>
                 <li className='flex ml-2 space-x-2'>
                   <h6>History</h6>
-                  </li>
+                </li>
                 <li className='flex ml-2 space-x-2'>
                   <h6>Our Team</h6>
-                  </li>
+                </li>
                 <li className='flex ml-2 space-x-2'>
                   <h6>Blog</h6>
-                  </li>
+                </li>
               </ul> : <></>
 
             }
