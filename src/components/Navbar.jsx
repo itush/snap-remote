@@ -94,7 +94,7 @@ const Navbar = () => {
 
         <div id="big-nav-links2" className='hidden w-[20%] mb-4 text-MedimGray lg:block '>
           <div className="flex items-center space-x-4 mt-4">
-            <button className='text-MediumGray hover:text-black xl:ml-[200%] xl2:ml-[350%]'>Login</button>
+            <button className='text-MediumGray hover:text-black xl:ml-[200%] xl2:ml-[350%]'><Link to="/login">Login</Link></button>
             <button className='text-MediumGray hover:text-black border-2 rounded-lg px-4 py-1 border-MediumGray hover:border-black '>Register</button>
           </div>
         </div>
@@ -169,7 +169,7 @@ const Navbar = () => {
         </ul>
 
         <div id="small-nav-links2" className='flex flex-col text-MediumGray'>
-          <button className=' '>Login</button>
+          <button className=' '><Link to="/login">Login</Link></button>
           <button className='border-2 rounded-lg px-4 mt-4 border-MediumGray '>Register</button>
         </div>
 

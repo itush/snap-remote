@@ -7,8 +7,9 @@ import cMeet from '../assets/images/client-meet.svg';
 import cMkr from '../assets/images/client-maker.svg';
 
 const MainContent = () => {
+  
   return (
-    <div className='lg:flex lg:flex-row-reverse lg:px-[12.5%]'>
+    <div id='m-content' className='lg:flex lg:flex-row-reverse lg:px-[12.5%]'>
       <section className='w-full'>
         <img src={heroM} alt="heroM" className='lg:hidden' />
         <img src={heroD} alt="heroD" className='hidden lg:block' />
